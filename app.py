@@ -1,5 +1,5 @@
 # ===== Importation des librairies =====#
-import dash
+from dash import Dash
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
