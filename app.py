@@ -24,7 +24,7 @@ df["Transaction_Date"] = pd.to_datetime(df["Transaction_Date"])
 df["Total_price"]=df['Avg_Price']*df['Quantity']*(1-(df['Discount_pct'])/100)
 
 # ===== Fonctions métiers =====#
-#* CA
+# CA
 def calculer_chiffre_affaire(data):
    return data['Total_price'].sum()
 
