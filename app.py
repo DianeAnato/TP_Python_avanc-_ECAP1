@@ -9,7 +9,8 @@ from dash import html, dcc, Input, Output, callback
 from dash import dash_table
 
 # ===== Initialisation =====#
-app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 # ===== Chargement des données =====#
 df = pd.read_csv("datasets/data.csv")
@@ -326,5 +327,5 @@ def update_table(selected_zone):
         [{"name": col, "id": col} for col in dff.columns]
     )
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run_server(debug=True)
